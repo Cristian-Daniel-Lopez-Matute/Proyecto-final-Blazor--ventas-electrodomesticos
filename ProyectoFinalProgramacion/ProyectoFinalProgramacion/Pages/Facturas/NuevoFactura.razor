@@ -1,0 +1,127 @@
+﻿@page "/Facturas/Nuevo"
+<h3>Nueva Factura</h3>
+<br />
+
+<EditForm Model="@fact">
+    <DataAnnotationsValidator />   
+  
+    <div class="form-group row">
+        <label for="Codigo" class="col-sm-2 col-form-label">
+            Codigo
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Codigo" class="form-control" placeholder="Codigo" @bind-Value="fact.Codigo" />
+            <ValidationMessage For="@(()=> fact.Codigo)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Descripcion" class="col-sm-2 col-form-label">
+            Descripcion
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Descripcion" class="form-control" placeholder="Descripcion" @bind-Value="fact.Descripcion" />
+            <ValidationMessage For="@(()=> fact.Descripcion)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="NombreCliente" class="col-sm-2 col-form-label">
+            NombreCliente
+        </label>
+        <div class="col-sm-10">
+            <InputText id="NombreCliente" class="form-control" placeholder="NombreCliente" @bind-Value="fact.NombreCliente" />
+            <ValidationMessage For="@(()=> fact.NombreCliente)" />
+
+        </div>
+
+    </div>
+
+
+     <div class="form-group row">
+        <label for="DNI" class="col-sm-2 col-form-label">
+            DNI
+        </label>
+        <div class="col-sm-10">
+            <InputText id="DNI" class="form-control" placeholder="DNI" @bind-Value="fact.DNI" />
+            <ValidationMessage For="@(()=> fact.DNI)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="Cantidad" class="col-sm-2 col-form-label">
+            Cantidad
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Cantidad" class="form-control" placeholder="Cantidad" @bind-Value="fact.Cantidad" />
+            <ValidationMessage For="@(()=> fact.Cantidad)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="Precio" class="col-sm-2 col-form-label">
+            Precio
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Precio" class="form-control" placeholder="Precio" @bind-Value="fact.Precio" />
+            <ValidationMessage For="@(()=> fact.Precio)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="SubTotal" class="col-sm-2 col-form-label">
+            SubTotal
+        </label>
+        <div class="col-sm-10">
+            <InputText id="SubTotal" class="form-control" placeholder="SubTotal" @bind-Value="fact.SubTotal" />
+            <ValidationMessage For="@(()=> fact.SubTotal)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Impuesto" class="col-sm-2 col-form-label">
+            Impuesto
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Impuesto" class="form-control" placeholder="Impuesto" @bind-Value="fact.Impuesto" />
+            <ValidationMessage For="@(()=> fact.Impuesto)" />
+
+        </div>
+
+    </div>
+    
+    <div class="form-group row">
+        <label for="Total" class="col-sm-2 col-form-label">
+            Total
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Total" class="form-control" placeholder="Total" @bind-Value="fact.Total" />
+            <ValidationMessage For="@(()=> fact.Total)" />
+
+        </div>
+
+    </div>
+               
+    <div class="form-group row">
+        <p>
+
+            <input type="submit" class="btn-toolbar btn-primary" value="Guardar" @onclick="Guardar"/>
+            <br />
+            <input type="submit" class="btn-toolbar btn-danger" value="Cancelar" @onclick="Cancelar"/>
+        </p>
+
+    </div>
+   
+</EditForm>

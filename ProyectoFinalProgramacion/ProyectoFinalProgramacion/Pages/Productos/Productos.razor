@@ -1,0 +1,47 @@
+﻿@page "/Productos"
+
+<h3>Lista de Productos</h3>
+
+<div class"form-group row">
+    <div class="col-sm-2">
+        <a href="/Productos/Nuevo" class="btn btn-primary">Nuevo Producto</a>
+    </div>
+</div>
+
+@if (productosLista == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Existencia</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in productosLista)
+            {
+                <tr>
+                    <td>@product.Codigo</td>
+                    <td>@product.Descripcion</td>
+                    <td>@product.Precio</td>
+                    <td>@product.Existencia</td>
+                    
+                    <td>
+                        <a class="btn btn-success" href="@($"/Productos/Editar/{product.Codigo}")">Editar</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+

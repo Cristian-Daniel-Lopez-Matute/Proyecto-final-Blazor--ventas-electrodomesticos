@@ -1,0 +1,50 @@
+﻿@page "/Facturas"
+
+<h3>Registro de Facturas</h3>
+
+<div class"form-group row">
+    <div class="col-sm-2">
+        <a href="/Facturas/Nuevo" class="btn btn-primary">Nueva Factura</a>
+    </div>
+</div>
+
+@if (facturaLista == null)
+{
+        <div class="spinner"></div>
+}
+else
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripcion</th>
+                    <th>NombreCliente</th>
+                    <th>DNI</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>SubTotal</th>
+                    <th>Impuesto</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var fact in facturaLista)
+            {
+                        <tr>
+                        <th>@fact.Codigo</th>
+                        <th>@fact.Descripcion</th>
+                        <th>@fact.NombreCliente</th>
+                        <th>@fact.DNI</th>
+                        <th>@fact.Cantidad</th>
+                        <th>@fact.Precio</th>
+                        <th>@fact.SubTotal</th>
+                        <th>@fact.Impuesto</th>
+                        <th>@fact.Total</th>
+                         
+                        </tr>
+            }
+            </tbody>
+        </table>
+}

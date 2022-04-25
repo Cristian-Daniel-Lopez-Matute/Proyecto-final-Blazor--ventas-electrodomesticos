@@ -1,0 +1,93 @@
+﻿@page "/Clientes/Editar/{IdCliente}"
+
+<EditForm Model="@customer">
+    <DataAnnotationsValidator />
+    <h3>Editar Clientes</h3>
+    <hr />
+
+    <div class="form-group row">
+        <label for="IdCliente" class="col-sm-2 col-form-label">
+            IdCLiente
+        </label>
+        <div class="col-sm-10">
+            <InputText id="IdCLiente" class="form-control" placeholder="IdCLiente" @bind-Value="customer.IdCliente" />
+            <ValidationMessage For="@(()=> customer.IdCliente)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Nombres" class="col-sm-2 col-form-label">
+            Nombres Cliente
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Nombres" class="form-control" placeholder="Nombres" @bind-Value="customer.Nombres" />
+            <ValidationMessage For="@(()=> customer.Nombres)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Apellidos" class="col-sm-2 col-form-label">
+            Apellidos Cliente
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Apellidos" class="form-control" placeholder="Apellidos" @bind-Value="customer.Apellidos" />
+            <ValidationMessage For="@(()=> customer.Apellidos)" />
+
+        </div>
+
+    </div>
+
+
+     <div class="form-group row">
+        <label for="Identificaion" class="col-sm-2 col-form-label">
+            Identificacion
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Identificacion" class="form-control" placeholder="Identificacion" @bind-Value="customer.Identificacion" />
+            <ValidationMessage For="@(()=> customer.Identificacion)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="Direccion" class="col-sm-2 col-form-label">
+            Direccion
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Direccion" class="form-control" placeholder="Direccion" @bind-Value="customer.Direccion" />
+            <ValidationMessage For="@(()=> customer.Direccion)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="Telefono" class="col-sm-2 col-form-label">
+            Telefono
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Telefono" class="form-control" placeholder="Telefono" @bind-Value="customer.Telefono" />
+            <ValidationMessage For="@(()=> customer.Telefono)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+   
+        <p>
+            <input type="submit" class="btn-toolbar btn-primary" value="Guardar" @onclick="Guardar"/>
+             <br />
+            <input type="submit" class="btn-toolbar btn-danger" value="Cancelar" @onclick="Cancelar"/>
+             <br />
+            <input type="submit" class="btn-toolbar btn-warning" value="Eliminar" @onclick="Eliminar"/>
+        </p>
+
+    </div>
+   
+</EditForm>

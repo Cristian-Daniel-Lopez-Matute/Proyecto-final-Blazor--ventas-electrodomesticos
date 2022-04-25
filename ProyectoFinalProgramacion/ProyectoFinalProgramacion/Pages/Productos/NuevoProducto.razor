@@ -1,0 +1,65 @@
+﻿@page "/Productos/Nuevo"
+<h3>Nuevo Producto</h3>
+<br />
+
+<EditForm Model="@product">
+    <DataAnnotationsValidator />
+
+   <div class="form-group row">
+        <label for="Codigo" class="col-sm-2 col-form-label">
+            Codigo
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Codigo" class="form-control" placeholder="Codigo" @bind-Value="product.Codigo" />
+            <ValidationMessage For="@(()=> product.Codigo)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Descripcion" class="col-sm-2 col-form-label">
+            Descripcion
+        </label>
+        <div class="col-sm-10">
+            <InputText id="Descripcion" class="form-control" placeholder="Descripcion" @bind-Value="product.Descripcion" />
+            <ValidationMessage For="@(()=> product.Descripcion)" />
+
+        </div>
+
+    </div>
+
+     <div class="form-group row">
+        <label for="Precio" class="col-sm-2 col-form-label">
+            Precio
+        </label>
+        <div class="col-sm-10">
+            <InputNumber id="Precio" class="form-control" placeholder="Precio" @bind-Value="product.Precio" />
+            <ValidationMessage For="@(()=> product.Precio)" />
+
+        </div>
+
+    </div>
+
+
+     <div class="form-group row">
+        <label for="Existencia" class="col-sm-2 col-form-label">
+            Existencia
+        </label>
+        <div class="col-sm-10">
+            <InputNumber id="Existencia" class="form-control" placeholder="Existencia" @bind-Value="product.Existencia" />
+            <ValidationMessage For="@(()=> product.Existencia)" />
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <p>
+            <input type="submit" class="btn-toolbar btn-primary" value="Guardar" @onclick="Guardar" />
+            <br />
+            <input type="submit" class="btn-toolbar btn-danger" value="Cancelar" @onclick="Cancelar" />
+        </p>
+    </div>
+
+</EditForm>

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Modelos;
+
+public class Producto
+{
+    [Required(ErrorMessage = "El Campo Codigo es Obligatorio")]
+    public string Codigo { get; set; }
+    [Required(ErrorMessage = "El Campo Descripción es Obligatorio")]
+    public string Descripcion { get; set; }
+    public decimal Precio { get; set; }
+    public int Existencia { get; set; }
+    
+
+}
